@@ -1,0 +1,9 @@
+{
+  "name": "angularjs-world",
+  "version": "1.0.0",
+  "description": "Angularjs Programming for beginners",  
+  "author": "Nagendra Padamara", 
+  "devDependencies": {
+    "express": "^4.13.4"
+  }
+}
