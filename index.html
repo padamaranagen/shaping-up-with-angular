@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Angularjs-world by nagendramca2011</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Angularjs-world</h1>
+        <h2>Learn Quickly!</h2>
+        <a href="https://github.com/nagendramca2011/Angularjs-World" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p>AngularJS is a great JavaScript framework that has some very compelling features for not only developers, but designers as well!</p>
+
+<p>AngularJS is a new, powerful, client-side technology that provides a way of accomplishing really powerful things in a way that embraces and extends HTML, CSS and JavaScript, while shoring up some of its glaring deficiencies. It is what HTML would have been, had it been built for dynamic content.</p>
+
+<h3>
+<a id="feature-1-two-way-data-binding" class="anchor" href="#feature-1-two-way-data-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature 1: Two Way Data-Binding</h3>
+
+<p>Think of your model as the single-source-of-truth for your application. Your model is where you go to to read or update anything in your application.</p>
+
+<p>Data-binding is probably the coolest and most useful feature in AngularJS. It will save you from writing a considerable amount of boilerplate code. A typical web application may contain up to 80% of its code base, dedicated to traversing, manipulating, and listening to the DOM. Data-binding makes this code disappear, so you can focus on your application.</p>
+
+<p>Think of your model as the single-source-of-truth for your application. Your model is where you go to to read or update anything in your application. The data-binding directives provide a projection of your model to the application view. This projection is seamless, and occurs without any effort from you.</p>
+
+<p>Traditionally, when the model changes, the developer is responsible for manually manipulating the DOM elements and attributes to reflect these changes. This is a two-way street. In one direction, the model changes drive change in DOM elements. In the other, DOM element changes necessitate changes in the model. This is further complicated by user interaction, since the developer is then responsible for interpreting the interactions, merging them into a model, and updating the view. This is a very manual and cumbersome process, which becomes difficult to control, as an application grows in size and complexity.</p>
+
+<p>There must be a better way! AngularJS' two-way data-binding handles the synchronization between the DOM and the model, and vice versa.</p>
+
+<p>Here is a simple example, which demonstrates how to bind an input value to an <code>&lt;h1&gt;</code> element.</p>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html ng-app&gt;
+  &lt;head&gt;
+    &lt;script src="http://code.angularjs.org/angular-1.0.0rc10.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;
+      &lt;input type="text" ng-model="yourName" placeholder="Enter a name here"&gt;
+      &lt;hr&gt;
+      &lt;h1&gt;Hello, {{yourName}}!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>This is extremely simple to set up, and almost magical…</p>
+
+<h3>
+<a id="feature-2-templates" class="anchor" href="#feature-2-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature 2: Templates</h3>
+
+<p>It's important to realize that at no point does AngularJS manipulate the template as strings. It's all the browser DOM.</p>
+
+<p>In AngularJS, a template is just plain-old-HTML. The HTML vocabulary is extended, to contain instructions on how the model should be projected into the view.</p>
+
+<p>The HTML templates are parsed by the browser into the DOM. The DOM then becomes the input to the AngularJS compiler. AngularJS traverses the DOM template for rendering instructions, which are called directives. Collectively, the directives are responsible for setting up the data-binding for your application view.</p>
+
+<p>It is important to realize that at no point does AngularJS manipulate the template as strings. The input to AngularJS is browser DOM and not an HTML string. The data-bindings are DOM transformations, not string concatenations or innerHTML changes. Using the DOM as the input, rather than strings, is the biggest differentiation AngularJS has from its sibling frameworks. Using the DOM is what allows you to extend the directive vocabulary and build your own directives, or even abstract them into reusable components!</p>
+
+<p>One of the greatest advantages to this approach is that it creates a tight workflow between designers and developers. Designers can mark up their HTML as they normally would, and then developers take the baton and hook in functionality, via bindings with very little effort.</p>
+
+<p>Here is an example where I am using the ng-repeat directive to loop over the images array and populate what is essentially an img template.</p>
+
+<p>function AlbumCtrl($scope) { 
+    scope.images = [
+        {"thumbnail":"img/image_01.png", "description":"Image 01 description"},
+        {"thumbnail":"img/image_02.png", "description":"Image 02 description"},
+        {"thumbnail":"img/image_03.png", "description":"Image 03 description"},
+        {"thumbnail":"img/image_04.png", "description":"Image 04 description"},
+        {"thumbnail":"img/image_05.png", "description":"Image 05 description"}
+    ];
+}</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">ng-controller</span>=<span class="pl-s"><span class="pl-pds">"</span>AlbumCtrl<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">ul</span>&gt;
+    &lt;<span class="pl-ent">li</span> <span class="pl-e">ng-repeat</span>=<span class="pl-s"><span class="pl-pds">"</span>image in images<span class="pl-pds">"</span></span>&gt;
+      &lt;<span class="pl-ent">img</span> <span class="pl-e">ng-src</span>=<span class="pl-s"><span class="pl-pds">"</span>{{image.thumbnail}}<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>{{image.description}}<span class="pl-pds">"</span></span>&gt;
+    &lt;/<span class="pl-ent">li</span>&gt;
+  &lt;/<span class="pl-ent">ul</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>It is also worth mentioning, as a side note, that AngularJS does not force you to learn a new syntax or extract your templates from your application.</p>
+
+<h3>
+<a id="feature-3-mvc" class="anchor" href="#feature-3-mvc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature 3: MVC</h3>
+
+<p>AngularJS incorporates the basic principles behind the original MVC software design pattern into how it builds client-side web applications.</p>
+
+<p>The MVC or Model-View-Controller pattern means a lot of different things to different people. AngularJS does not implement MVC in the traditional sense, but rather something closer to MVVM (Model-View-ViewModel).</p>
+
+<h5>
+<a id="the-model" class="anchor" href="#the-model" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Model</h5>
+
+<p>The model is simply the data in the application. The model is just plain old JavaScript objects. There is no need to inherit from framework classes, wrap it in proxy objects, or use special getter/setter methods to access it. The fact that we are dealing with vanilla JavaScript is a really nice feature, which cuts down on the application boilerplate.</p>
+
+<h5>
+<a id="the-viewmodel" class="anchor" href="#the-viewmodel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The ViewModel</h5>
+
+<p>A viewmodel is an object that provides specific data and methods to maintain specific views.</p>
+
+<p>The viewmodel is the $scope object that lives within the AngularJS application. $scope is just a simple JavaScript object with a small API designed to detect and broadcast changes to its state.</p>
+
+<h5>
+<a id="the-controller" class="anchor" href="#the-controller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Controller</h5>
+
+<p>The controller is responsible for setting initial state and augmenting $scope with methods to control behavior. It is worth noting that the controller does not store state and does not interact with remote services.</p>
+
+<h5>
+<a id="the-view" class="anchor" href="#the-view" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The View</h5>
+
+<p>The view is the HTML that exists after AngularJS has parsed and compiled the HTML to include rendered markup and bindings.</p>
+
+<p>This division creates a solid foundation to architect your application. The $scope has a reference to the data, the controller defines behavior, and the view handles the layout and handing off interaction to the controller to respond accordingly.</p>
+
+<h3>
+<a id="feature-4-dependency-injection" class="anchor" href="#feature-4-dependency-injection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature 4: Dependency Injection</h3>
+
+<p>AngularJS has a built-in dependency injection subsystem that helps the developer by making the application easier to develop, understand, and test.</p>
+
+<p>Dependency Injection (DI) allows you to ask for your dependencies, rather than having to go look for them or make them yourself. Think of it as a way of saying "Hey I need X', and the DI is responsible for creating and providing it for you.</p>
+
+<p>To gain access to core AngularJS services, it is simply a matter of adding that service as a parameter; AngularJS will detect that you need that service and provide an instance for you.</p>
+
+<p>function EditCtrl($scope, $location, $routeParams) {
+       // Something clever here...
+  }
+You are also able to define your own custom services and make those available for injection as well.</p>
+
+<p>angular.
+      module('MyServiceModule', []).
+      factory('notify', ['$window', function (win) {
+      return function (msg) {
+          win.alert(msg);
+      };
+  }]);</p>
+
+<p>function myController(scope, notifyService) {
+      scope.callNotify = function (msg) {
+          notifyService(msg);
+      };
+  }</p>
+
+<p>myController.$inject = ['$scope', 'notify'];</p>
+
+<h3>
+<a id="feature-5-directives" class="anchor" href="#feature-5-directives" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature 5: Directives</h3>
+
+<p>Directives are my personal favorite feature of AngularJS. Have you ever wished that your browser would do new tricks for you? Well, now it can! This is one of my favorite parts of AngularJS. It is also probably the most challenging aspect of AngularJS.</p>
+
+<p>Directives can be used to create custom HTML tags that serve as new, custom widgets. They can also be used to "decorate" elements with behavior and manipulate DOM attributes in interesting ways.</p>
+
+<p>Here is a simple example of a directive that listens for an event and updates its $scope, accordingly.</p>
+
+<p>myModule.directive('myComponent', function(mySharedService) {
+      return {
+          restrict: 'E',
+          controller: function($scope, $attrs, mySharedService) {
+              $scope.$on('handleBroadcast', function() {
+                  $scope.message = 'Directive: ' + mySharedService.message;
+              });
+          },
+          replace: true,
+          template: ''
+      };
+  });</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/nagendramca2011/Angularjs-World/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/nagendramca2011/Angularjs-World/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/nagendramca2011/Angularjs-World"></a> is maintained by <a href="https://github.com/nagendramca2011">nagendramca2011</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
