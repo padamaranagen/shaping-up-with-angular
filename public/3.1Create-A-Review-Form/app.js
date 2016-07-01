@@ -81,7 +81,7 @@
         color: '#000',
         faces: 6,
         images: [
-           "images/7.jpg",
+          "images/7.jpg",
           "images/8.jpg",
           "images/1.jpg"
         ],
