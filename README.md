@@ -14,8 +14,8 @@ Traditionally, when the model changes, the developer is responsible for manually
 
 There must be a better way! AngularJS' two-way data-binding handles the synchronization between the DOM and the model, and vice versa.
 
-Here is a simple example, which demonstrates how to bind an input value to an <h1> element.
-```html
+Here is a simple example, which demonstrates how to bind an input value to an ```<h1>``` element.
+```
 <!doctype html>
 <html ng-app>
   <head>
