@@ -5,3 +5,4 @@
 2. Set the blockquote stars ( strong tag) to the review stars.
 3. Add the review body between the strong & cite tags.
 4. Set the cite to the review author.
+
