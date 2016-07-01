@@ -5,7 +5,15 @@
         this.products = gems;
     });
 
-
+    app.controller('TabController', function () {
+        this.tab = 1;
+        this.setTab = function (selectedTab) {
+            this.tab = selectedTab;
+        };
+        this.isSet = function (value) {
+            return this.tab == value;
+        };
+    });
 
     var gems = [
         {
