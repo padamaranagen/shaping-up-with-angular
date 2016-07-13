@@ -41,3 +41,8 @@
 2. Initialize a current property of GalleryController with a value of 0.
 3. Add a method to GalleryController called setCurrent that accepts a value and assigns it to current. If no value is passed in, set current to 0.
 ```
+
+```
+1. Attach GalleryController to the .gallery element that wraps our gallery; use the alias gallery.
+2. Change the ng-src directive on the main image to use the current property. You'll need to access the current-th product image.
+```
