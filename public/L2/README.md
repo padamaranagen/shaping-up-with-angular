@@ -35,3 +35,9 @@
 5. Within the Description tab, output the product's description within the <blockquote> element.
 6. Within the Specs tab, output the product's shine value. It should look something like this within the <blockquote> element: "Shine: 4".
 ```
+
+```
+1. Let's start with a Controller, just like last time. Call it GalleryController.
+2. Initialize a current property of GalleryController with a value of 0.
+3. Add a method to GalleryController called setCurrent that accepts a value and assigns it to current. If no value is passed in, set current to 0.
+```
