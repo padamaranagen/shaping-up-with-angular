@@ -16,3 +16,9 @@
 4. Display the name of the product inside the <h3> tag.
 5. Display the price of the product inside the <em> tag.
 ```
+
+
+```
+1. Use a directive to ensure that we can only see the "Add to Cart" button if the canPurchase property is true.
+2. Our first gem is so popular that we've run out of stock already! Well, Flatlander gems are pretty rare, so it shouldn't be a big surprise. Luckily there is a soldOut property to our gem. When a gem is soldOut, hide the .product element.
+```
