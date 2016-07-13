@@ -2,17 +2,17 @@
 
 #### TEMPLATING WITH CUSTOM DIRECTIVES
 
-* Directives
+##### Directives
 
-** Refactoring Description Tab
-** Creating an Element Directive
-** Creating an Attribute Directive
+* Refactoring Description Tab
+* Creating an Element Directive
+* Creating an Attribute Directive
 
 #### SMARTER CUSTOM DIRECTIVES
 
-** Directive Controllers
-** Refactoring Product Tabs
-** Refactoring Product Gallery
+* Directive Controllers
+* Refactoring Product Tabs
+* Refactoring Product Gallery
 
 #### Tasks
 
