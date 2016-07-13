@@ -20,3 +20,12 @@
 2. On the blank line with no tags put in the right expression to display review.body
 3. In the cite tag, immediately after the -, put in the right expression to display review.author.
 ```
+
+```
+1. Create a new controller called ReviewController.
+2. Set our review variable to an empty object when the ReviewController is created.
+3. Create an empty function named addReview in your ReviewController.
+4. We'll pass in the product we want to review to our addReview function. Edit your function declaration to accept a product parameter.
+5. When addReview is called with a product, it should add the review from the controller to the passed-in product's reviews array. Implement this functionality in the addReview method.
+6. Reset the review to an empty object after it's been added to product.reviews.
+```
