@@ -22,3 +22,8 @@
 1. Use a directive to ensure that we can only see the "Add to Cart" button if the canPurchase property is true.
 2. Our first gem is so popular that we've run out of stock already! Well, Flatlander gems are pretty rare, so it shouldn't be a big surprise. Luckily there is a soldOut property to our gem. When a gem is soldOut, hide the .product element.
 ```
+
+```
+1. In the app.js file we changed things up a little with a new gems array. Assign gems to a products property inside StoreController.
+2. You know how to display all the products, don't you? Use the correct directive to display all the products in product row divs.
+```
