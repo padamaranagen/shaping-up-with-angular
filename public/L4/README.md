@@ -33,3 +33,13 @@
 6. Now remove the product tabs section from index.html and the TabController from app.js.
 7. Use our new productTabs directive where the tabs section used to be in our index.html.
 ```
+
+```
+1. Create an element directive called productGallery.
+2. Tell your new directive to use the product-gallery.html template with the templateUrl attribute.
+3. Give our productGallery directive all the gallery functionality that is currently inside our GalleryController. Make sure that you do not delete the GalleryController yet. We don't want to break the site.
+4. Add the controllerAs attribute to your directive setting it to gallery so the directive knows what all the references to gallery in product-gallery.html are.
+5. Put the gallery div inside of the provided product-gallery.html. Remove the ng-controller from the div inside the file once moved.
+6. Now remove the image gallery div from index.html and the GalleryController from app.js.
+7. Use our new productGallery directive where the gallery div used to be in our index.html.
+```
