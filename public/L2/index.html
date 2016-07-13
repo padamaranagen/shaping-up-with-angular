@@ -6,12 +6,20 @@
     <script src="../bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
-<body class="container" ng-controller="StoreController as store">
-    <div class="product row" ng-repeat="product in store.products">
-        <h3>
-            {{product.name}}
-            <em class="pull-right">{{product.price | currency}}</em>
-        </h3>
+<body ng-controller="StoreController as store">
+    <!--  Products Container  -->
+    <div class="list-group">
+        <!--  Product Container  -->
+        <div class="list-group-item" ng-repeat="product in store.products">
+            <h3>
+                {{product.name}}
+                <em class="pull-right">{{product.price | currency}}</em>
+            </h3>
+            <!-- Image Gallery  -->
+            <div class="gallery">
+                <img ng-src="{{product.images[0]}}" />
+            </div>
+        </div>
     </div>
 </body>
 </html>
