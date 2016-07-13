@@ -29,3 +29,10 @@
 5. When addReview is called with a product, it should add the review from the controller to the passed-in product's reviews array. Implement this functionality in the addReview method.
 6. Reset the review to an empty object after it's been added to product.reviews.
 ```
+
+```
+1. Inside the form tag create a ng-controller attribute and assign it to the ReviewController with an alias of reviewCtrl.
+2. Inside the form tag create a ng-submit attribute. Set the value of the ng-submit attribute to call our new addReview function. Remember to pass in product when calling the addReview function.
+3. Prefix all three ng-models with the controller's alias.
+4. If you will notice, our live preview is no longer working. Try and figure out why and get the preview blockquote working again!
+```
