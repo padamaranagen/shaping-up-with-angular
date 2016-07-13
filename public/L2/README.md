@@ -16,3 +16,6 @@
 2. Now that we have image available from our ng-repeat let's replace the product.images[0] with it.
 ```
 
+```
+1. Use the ng-show directive to make sure our image gallery is only displayed if a product has images.
+```
