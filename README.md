@@ -1,14 +1,14 @@
 ## Level 1 : Flatlander's Gem Store
-
+```
 ###	RAMP UP
-	*Creating a Store Module
+	* Creating a Store Module
 ### INDEX HTML SETUP UP
-	*Index HTML SETUP
-	*Our First Controller
+	* Index HTML SETUP
+	* Our First Controller
 ### USING BUILT-IN DIRECTIVES
-	*Not for Sale
+	* Not for Sale
 	Look More Gems!
-
+```	
 ## Level 2 : Built-in Directives 
 ```
 ###	GALLERY
